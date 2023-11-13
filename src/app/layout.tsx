@@ -1,8 +1,10 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Public_Sans } from 'next/font/google'
 import './globals.css'
+import { Providers } from '@/app/providers'
+import { Container, Footer, NavbarApp } from '@/components'
 
-const inter = Inter({ subsets: ['latin'] })
+const publicSans = Public_Sans({ subsets: ['latin'], weight: ['300', '400', '500', '700'] })
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -15,8 +17,20 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`relative ${publicSans.className} overflow-x-hidden`} suppressHydrationWarning>
+        <Providers>
+          <div className="absolute top-0 left-0 w-full bg-white">
+            <Container>
+              <NavbarApp />
+            </Container>
+          </div>
+          <main>
+            {children}
+          </main>
+          <Footer />
+        </Providers>
+      </body>
     </html>
   )
 }
