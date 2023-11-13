@@ -1,4 +1,5 @@
 import { OnlineIcon, BudgetingIcon, OnBoardingIcon, ApiIcon, InstagramIcon, FacebokIcon, TwitterIcon, PinteresIcon, YoutubeIcon } from '@/icons'
+import { getBasePath } from '@/utils'
 
 export const CHOOSE_ITEMS = [
     {
@@ -27,25 +28,25 @@ export const ARTICLES_ITEMS = [
     {
         title: "Receive money in any currency with no fees",
         autor: "Claire Robinson",
-        src: "/images/image-currency.jpg",
+        src: getBasePath('images/image-currency.jpg'),
         description: "The world is getting smaller and we're be becoming more mobile. So why should you be forced to only receive money un a single Lorem ipsum dolor sit amet consectetur adipisicing elit."
     },
     {
         title: "Treat yourselft without worrying about money",
         autor: "Wilson Hutton",
-        src: "/images/image-restaurant.jpg",
+        src: getBasePath('images/image-restaurant.jpg'),
         description: "Our simple budgeting feature allows you to separate out your spending and set realistic limits each month. That means you Lorem ipsum dolor sit amet consectetur adipisicing elit."
     },
     {
         title: "Take your Easybank card wherever you go",
         autor: "Wilson Hutton",
-        src: "/images/image-plane.jpg",
+        src: getBasePath('images/image-plane.jpg'),
         description: "We want you to enjoy your travels. This is way we don't charge any fees on purchases while you're abroad. We'll even show you Lorem ipsum dolor sit amet consectetur adipisicing elit."
     },
     {
         title: "Our invite-only Beta accouts are now live!",
         autor: "Claire Robinson",
-        src: "/images/image-confetti.jpg",
+        src: getBasePath('images/image-confetti.jpg'),
         description: "After a lot of hard word by whole team. We're excited to launch our closed beta. It's easy to request an invite through the site Lorem ipsum dolor sit amet consectetur adipisicing elit."
     },
 ]

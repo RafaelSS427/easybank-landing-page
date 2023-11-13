@@ -6,6 +6,7 @@ import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenu, NavbarMenuT
 import Image from 'next/image'
 import { RequestButton } from '@/components/ui/RequestButton'
 import { APP_LINKS } from '@/config'
+import { getBasePath } from '@/utils'
 
 type PropsTest = {
   children?: ReactNode,
@@ -47,7 +48,7 @@ export const NavbarApp = () => {
       }}
     >
       <NavbarBrand>
-        <Image src="/logo.svg" width={140} height={20} alt="Logo" />
+        <Image src={getBasePath('logo.svg')} width={140} height={20} alt="Logo" />
       </NavbarBrand>
       <NavbarContent className="hidden md:flex gap-4" justify="center">
         {

@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { Container, RequestButton } from "./"
 import { APP_LINKS, socialMedia } from '@/config'
-import { splitArray } from '@/utils'
+import { getBasePath, splitArray } from '@/utils'
 import Link from 'next/link'
 
 const links = splitArray(3, APP_LINKS.filter(e => e.label.toLocaleLowerCase() !== 'home'))
@@ -14,9 +14,8 @@ export const Footer = () => {
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full lg:gap-20 lg:w-auto">
                         <div className="flex flex-col gap-5 lg:gap-10 mb-4">
                             <div className="flex justify-center">
-                                <Image src="/logo-light.svg" width={140} height={20} alt="Logo" />
+                                <Image src={getBasePath('logo-light.svg')} width={140} height={20} alt="Logo" />
                             </div>
-
 
                             <div className="flex justify-center">
                                 <div className="flex gap-4">

@@ -1,6 +1,7 @@
 import { Container, RequestButton } from '@/components'
 import { Fragment } from 'react'
 import Balancer from 'react-wrap-balancer'
+import { getBasePath } from '@/utils'
 
 export const Hero = () => {
     return (
@@ -22,10 +23,20 @@ export const Hero = () => {
                         <div className="lg:hidden lg:mt-0 lg:col-span-5">
 
                             {/* devices */}
-                            <div className="bg-[url('/image-mockups.png')] absolute -top-[64px] left-0 bg-contain bg-center bg-no-repeat w-[100%] h-[calc(939px/2)] sm:h-[595px]" />
+                            <div
+                                style={{
+                                    backgroundImage: `url('${getBasePath('image-mockups.png')}')`
+                                }}
+                                className="absolute -top-[64px] left-0 bg-contain bg-center bg-no-repeat w-[100%] h-[calc(939px/2)] sm:h-[595px]"
+                            />
 
                             {/* bg svg */}
-                            <div className="absolute top-0 right-0 -z-20 bg-[url('/bg-intro-mobile.svg')] bg-cover bg-no-repeat bg-center w-[100%] h-[475px] sm:h-[600px]" />
+                            <div
+                                style={{
+                                    backgroundImage: `url('${getBasePath('bg-intro-mobile.svg')}')`
+                                }}
+                                className="absolute top-0 right-0 -z-20 bg-cover bg-no-repeat bg-center w-[100%] h-[475px] sm:h-[600px]"
+                            />
 
                             {/* Empty container */}
                             <div className="h-[calc((939px/2)-96px)] sm:h-[calc(595px-96px)]" />
@@ -34,10 +45,20 @@ export const Hero = () => {
                 </Container>
             </section>
             {/* devices */}
-            <div className="hidden absolute top-0 right-0 -z-10 bg-[url('/image-mockups.png')] lg:block lg:-translate-y-[40px] lg:translate-x-[110px] 2xl:translate-x-0 bg-contain bg-no-repeat bg-right-top w-[100%] h-[790px]" />
+            <div
+                style={{
+                    backgroundImage: `url('${getBasePath('image-mockups.png')}')`
+                }}
+                className="hidden absolute top-0 right-0 -z-10 lg:block lg:-translate-y-[40px] lg:translate-x-[110px] 2xl:translate-x-0 bg-contain bg-no-repeat bg-right-top w-[100%] h-[790px]"
+            />
 
             {/* bg svg */}
-            <div className="hidden absolute top-0 right-0 -z-20 bg-[url('/bg-intro-desktop.svg')] lg:block lg:-translate-y-[135px] lg:translate-x-[200px] 2xl:translate-x-[100px] bg-contain bg-no-repeat bg-right-top w-[100%] h-[790px]" />
+            <div
+                style={{
+                    backgroundImage: `url('${getBasePath('bg-intro-desktop.svg')}')`
+                }}
+                className="hidden absolute top-0 right-0 -z-20 lg:block lg:-translate-y-[135px] lg:translate-x-[200px] 2xl:translate-x-[100px] bg-contain bg-no-repeat bg-right-top w-[100%] h-[790px]"
+            />
         </Fragment>
     )
 }
