@@ -1,7 +1,7 @@
 
+import Balancer from 'react-wrap-balancer'
 import { CardArticle, Container } from '@/components'
 import { ARTICLES_ITEMS } from '@/config'
-import Balancer from 'react-wrap-balancer'
 
 export const Articles = () => {
     return (

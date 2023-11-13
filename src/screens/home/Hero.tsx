@@ -1,6 +1,6 @@
-import { Container, RequestButton } from '@/components'
 import { Fragment } from 'react'
 import Balancer from 'react-wrap-balancer'
+import { Container, RequestButton } from '@/components'
 import { getBasePath } from '@/utils'
 
 export const Hero = () => {

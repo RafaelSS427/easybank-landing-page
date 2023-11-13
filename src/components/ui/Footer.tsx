@@ -1,8 +1,8 @@
 import Image from 'next/image'
-import { Container, RequestButton } from "./"
-import { APP_LINKS, socialMedia } from '@/config'
-import { getBasePath, splitArray } from '@/utils'
 import Link from 'next/link'
+import { Container, RequestButton } from "./"
+import { getBasePath, splitArray } from '@/utils'
+import { APP_LINKS, socialMedia } from '@/config'
 
 const links = splitArray(3, APP_LINKS.filter(e => e.label.toLocaleLowerCase() !== 'home'))
 

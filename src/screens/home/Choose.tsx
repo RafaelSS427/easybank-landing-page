@@ -1,7 +1,7 @@
 
+import Balancer from 'react-wrap-balancer'
 import { CardChoose, Container } from '@/components'
 import { CHOOSE_ITEMS } from '@/config'
-import Balancer from 'react-wrap-balancer'
 
 export const Choose = () => {
     return (
