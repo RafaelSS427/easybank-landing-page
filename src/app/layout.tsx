@@ -4,7 +4,11 @@ import './globals.css'
 import { Providers } from '@/app/providers'
 import { Container, Footer, NavbarApp } from '@/components'
 
-const publicSans = Public_Sans({ subsets: ['latin'], weight: ['300', '400', '500', '700'] })
+const publicSans = Public_Sans({ 
+  subsets: ['latin'], 
+  weight: ['300', '400', '500', '700'],
+  variable: '--font-public-sans'
+})
 
 export const metadata: Metadata = {
   title: 'Easybank Landing Page',
@@ -18,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`relative ${publicSans.className} overflow-x-hidden`} suppressHydrationWarning>
+      <body className={`${publicSans.className}`} suppressHydrationWarning>
         <Providers>
           <div className="absolute top-0 left-0 w-full bg-white">
             <Container>

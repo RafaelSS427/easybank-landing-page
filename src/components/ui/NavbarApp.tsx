@@ -26,6 +26,7 @@ export const NavbarApp = () => {
 
   return (
     <Navbar
+      isMenuOpen={isOpen}
       onMenuOpenChange={setIsOpen}
       maxWidth="full"
       isBlurred={false}
@@ -42,7 +43,7 @@ export const NavbarApp = () => {
           "after:right-0",
           "after:h-[3px]",
           "after:bg-trasparent",
-          "data-[active=true]:after:bg-gradient-to-r data-[active=true]:after:from-limeGreen data-[active=true]:after:to-brightCyan",
+          "data-[active=true]:after:bg-gradient-to-r data-[active=true]:after:from-limeGreen data-[active=true]:after:to-brightCyan data-[active=true]:text-black",
           "hover:after:bg-gradient-to-r hover:after:from-limeGreen hover:after:to-brightCyan",
         ],
       }}
@@ -53,8 +54,8 @@ export const NavbarApp = () => {
       <NavbarContent className="hidden md:flex gap-4" justify="center">
         {
           APP_LINKS.filter(e => !e.isFooter).map(({ href, label }, i) => (
-            <NavbarItem key={label + i} isActive={label.toLocaleLowerCase() === 'home'}>
-              <CustomLink href={href}>
+            <NavbarItem key={label + i} isActive={label.toLocaleLowerCase() === 'home'} className="transition-colors text-grayishBlue hover:text-black">
+              <CustomLink href={href} className="h-full flex items-center">
                 {label}
               </CustomLink>
             </NavbarItem>

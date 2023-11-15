@@ -8,7 +8,7 @@ export const Hero = () => {
         <Fragment>
             <section>
                 <Container>
-                    <div className="lg:bg-transparent grid px-4 py-8 gap-5 lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 lg:h-[587px] before:content-[''] before:-z-20 before:absolute before:w-full before:h-full before:top-0 before:left-0 before:bg-[#fafafa]">
+                    <div className="lg:bg-transparent grid px-4 py-8 gap-5 lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 lg:h-[643px] before:content-[''] before:-z-20 before:absolute before:w-full before:h-full before:top-0 before:left-0 before:bg-[#fafafa]">                        
                         <div className="mr-auto w-full flex justify-center lg:place-self-center lg:w-auto lg:col-span-7 order-1">
                             <div className="text-center lg:text-start max-w-[490px] lg:mt-[64px]">
                                 <h1 className="max-w-2xl mb-4 text-4xl font-light tracking-tight leading-none md:text-5xl xl:text-6xl text-darkBlue">
@@ -57,7 +57,7 @@ export const Hero = () => {
                 style={{
                     backgroundImage: `url('${getBasePath('bg-intro-desktop.svg')}')`
                 }}
-                className="hidden absolute top-0 right-0 -z-20 lg:block lg:-translate-y-[135px] lg:translate-x-[200px] 2xl:translate-x-[100px] bg-contain bg-no-repeat bg-right-top w-[100%] h-[790px]"
+                className="hidden absolute top-0 right-0 -z-20 lg:block lg:-translate-y-[154px] lg:translate-x-[370px] 2xl:translate-x-[260px] bg-contain bg-no-repeat bg-right-top w-[100%] h-[865px]"
             />
         </Fragment>
     )
